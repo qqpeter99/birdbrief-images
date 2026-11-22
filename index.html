@@ -15,7 +15,7 @@
   <style>
     :root {
       --ink: #2c2a26; --ink-2: #41403e; --muted: #6f6b64; --line: #e4e0d8;
-      --paper: #ffffff; --cream: #f6f4ef; --accent: #ec572e; --accent-dark: #c9431f;
+      --paper: #ffffff; --cream: #f6f4ef; --accent: #009bd1; --accent-ink: #0079a8; --accent-btn: #0081b3; --accent-dark: #006690;
       --go: #2f7a3e; --decent: #b07a12; --skip: #b3261e;
       --sans: "Archivo", -apple-system, "Segoe UI", sans-serif;
       --mono: "DM Mono", ui-monospace, "Courier New", monospace;
@@ -54,7 +54,7 @@
     .hero p.lede { font-size: 19px; max-width: 560px; margin: 0 0 28px; color: rgba(255,255,255,.9); }
     form.signup { display: flex; gap: 8px; max-width: 520px; }
     form.signup input[type=email] { flex: 1; padding: 15px 16px; font: 16px var(--sans); border: 0; border-radius: 2px; }
-    button, .btn { font: 500 13px var(--mono); text-transform: uppercase; letter-spacing: .1em; color: #fff; background: var(--accent); border: 0; border-radius: 2px; padding: 15px 22px; cursor: pointer; text-decoration: none; display: inline-block; }
+    button, .btn { font: 500 13px var(--mono); text-transform: uppercase; letter-spacing: .1em; color: #fff; background: var(--accent-btn); border: 0; border-radius: 2px; padding: 15px 22px; cursor: pointer; text-decoration: none; display: inline-block; }
     button:hover, .btn:hover { background: var(--accent-dark); }
     .fine { margin-top: 12px; color: rgba(255,255,255,.75); }
     .thanks { display: none; max-width: 520px; padding: 14px 16px; background: rgba(255,255,255,.12); border-left: 3px solid var(--accent); }
@@ -62,13 +62,14 @@
     /* Sections */
     section { padding: 88px 0; }
     section.cream { background: var(--cream); }
-    .eyebrow { color: var(--accent); margin-bottom: 10px; }
+    .eyebrow { color: var(--accent-ink); margin-bottom: 10px; }
+    .closer .eyebrow, .tier + .tier .eyebrow { color: var(--accent); }
     h2 { font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 4.4vw, 48px); line-height: 1; letter-spacing: -.015em; margin: 0 0 14px; }
     .sub { color: var(--muted); font-size: 18px; max-width: 620px; margin: 0 0 40px; }
 
     /* Why BirdBrief: value props */
     .why { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
-    .why .n { color: var(--accent); }
+    .why .n { color: var(--accent-ink); }
     .why h4 { font-size: 19px; font-weight: 800; margin: 10px 0 6px; }
     .why p { margin: 0; color: var(--muted); font-size: 15px; }
 
@@ -91,6 +92,13 @@
     table.metrics td:first-child { color: var(--muted); }
     table.metrics td:last-child { font-family: var(--mono); }
     .forecast p { margin: 0 0 8px; font-size: 15px; }
+    .shot { margin: 12px 0 0; }
+    .shot img { display: block; width: 100%; height: auto; border-radius: 3px; }
+    .shot figcaption { font-size: 12px; color: var(--muted); margin-top: 6px; }
+    .shot figcaption b { color: var(--ink); font-size: 13px; }
+    .shot figcaption:first-child { margin: 0 0 6px; }
+    .cams { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .cams .shot { margin: 0; }
     .forecast .watch { font-size: 13px; color: var(--muted); }
     .sample-copy li { margin-bottom: 14px; }
     .sample-copy b { display: block; font-size: 17px; }
@@ -105,7 +113,7 @@
     .tier ul { padding-left: 18px; margin: 0; }
     .tier li { margin-bottom: 8px; }
     .tier .eyebrow { margin: 0; }
-    .soon { font: 500 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); background: var(--accent); padding: 2px 6px; margin-left: 6px; vertical-align: 2px; }
+    .soon { font: 500 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--accent-btn); padding: 2px 6px; margin-left: 6px; vertical-align: 2px; }
 
     /* Sources strip */
     .sources { display: flex; flex-wrap: wrap; gap: 10px 28px; color: var(--muted); }
@@ -115,7 +123,7 @@
     details { border-top: 1px solid var(--line); padding: 18px 0; }
     details:last-child { border-bottom: 1px solid var(--line); }
     summary { font-weight: 700; font-size: 18px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
-    summary::after { content: "+"; font-family: var(--mono); color: var(--accent); }
+    summary::after { content: "+"; font-family: var(--mono); color: var(--accent-ink); }
     details[open] summary::after { content: "–"; }
     details p { color: var(--muted); margin: 10px 0 0; }
 
@@ -230,6 +238,10 @@
               </ul>
             </div>
           </div>
+          <figure class="shot">
+            <img src="images/sample/snowbird-route-before.jpg" alt="Plan A drawn on the Snowbird trail map: laps 1-3 on Gadzoom, 4-5 on Mid-Gad, parking at the base" loading="lazy" />
+            <figcaption>Plan A on the trail map: laps 1-3 on Gadzoom, 4-5 on Mid-Gad, parked at the base.</figcaption>
+          </figure>
 
           <div class="label mono">Conditions</div>
           <table class="metrics">
@@ -244,6 +256,14 @@
             <p>Uphill travel is closed for snowmaking, so stay off the mountain. Opening day Friday brings about an inch, with more substantial snow around December 1.</p>
             <p>Utah's Wasatch will see small waves of snow around Nov 26-27 and Nov 28-Dec 1, with about a foot possible in the Cottonwoods by December 1.</p>
             <p class="watch">Watch: Mountain Weather Update 11/22, Meteorologist Chris Tomer (YouTube)</p>
+          </div>
+
+          <div class="label mono">Live conditions</div>
+          <div class="cams">
+            <figure class="shot"><figcaption><b>Snow stake</b></figcaption><img src="images/sample/snow-stake.jpg" alt="Snowbird snow stake camera" loading="lazy" /><figcaption>Fresh snow capping the stake board.</figcaption></figure>
+            <figure class="shot"><figcaption><b>Peruvian Gulch</b></figcaption><img src="images/sample/peruvian-gulch.jpg" alt="Peruvian Gulch camera" loading="lazy" /><figcaption>Overcast, good visibility.</figcaption></figure>
+            <figure class="shot"><figcaption><b>Top of Mineral Basin</b></figcaption><img src="images/sample/top-of-mineral-basin.jpg" alt="Top of Mineral Basin camera" loading="lazy" /><figcaption>Good coverage, chairs not running yet.</figcaption></figure>
+            <figure class="shot"><figcaption><b>SR-210 at White Pine</b></figcaption><img src="images/sample/udot-sr-210-white-pine-mp-8-7.jpg" alt="UDOT camera on SR-210 at White Pine" loading="lazy" /><figcaption>Canyon road dry.</figcaption></figure>
           </div>
         </div>
       </div>
