@@ -49,6 +49,8 @@
     nav a { margin-left: 22px; text-decoration: none; opacity: .85; }
     nav a:hover { opacity: 1; }
     .hero-body { margin-top: auto; padding-bottom: 64px; width: 100%; }
+    .hero-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+    .pill { background: var(--accent-btn); color: #fff; padding: 6px 10px; border-radius: 2px; }
     .hero h1 { font-weight: 900; text-transform: uppercase; font-size: clamp(40px, 7vw, 88px); line-height: .95; letter-spacing: -.02em; margin: 14px 0 18px; max-width: 900px; }
     .hero h1 em { font-family: var(--serif); font-style: italic; font-weight: 500; text-transform: none; letter-spacing: -.01em; }
     .hero p.lede { font-size: 19px; max-width: 560px; margin: 0 0 28px; color: rgba(255,255,255,.9); }
@@ -168,15 +170,15 @@
     </header>
 
     <div class="hero-body wrap" id="subscribe">
-      <div class="mono">Daily brief · Snowbird, Utah</div>
+      <div class="hero-tags"><span class="pill mono">Free for the 2026–27 ski and snowboard season</span><span class="mono">Daily brief · Snowbird, Utah</span></div>
       <h1>Ski the right lift at the <em>right time.</em></h1>
-      <p class="lede">A free morning email that reads the snow, weather, avalanche, canyon road and parking data, then tells you whether to go, where to park and which lifts to lap.</p>
+      <p class="lede">A free morning email that reads the snow, weather, avalanche, canyon road and parking data, then tells you whether to go, where to park and which lifts to lap for your ability level.</p>
       <form class="signup" id="signup">
         <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
         <button type="submit">Get the brief</button>
       </form>
       <div class="thanks" id="thanks">Thanks! Signups open soon. This is a preview, so your email wasn't saved yet.</div>
-      <p class="fine mono">Free · One email a day · Unsubscribe anytime</p>
+      <p class="fine mono">Free all 2026–27 season · One email a day · Unsubscribe anytime</p>
     </div>
   </div>
 
@@ -187,7 +189,7 @@
       <p class="sub">Our AI reads every report before you wake up, makes the call, and builds a plan that gets the most out of every hour on the mountain.</p>
       <div class="why">
         <div><div class="n mono">01</div><h4>Go or wait?</h4><p>GO, DECENT or SKIP for your ski window, so you never burn a day on bad snow or miss a great one.</p></div>
-        <div><div class="n mono">02</div><h4>Your game plan</h4><p>Where to park, your first lift, a warm-up, then laps in order, ending back at your car.</p></div>
+        <div><div class="n mono">02</div><h4>Your game plan</h4><p>Where to park, your first lift, a warm-up, then laps matched to your ability, from cruisy groomers to steeps, ending back at your car.</p></div>
         <div><div class="n mono">03</div><h4>Chase the best snow</h4><p>New snow, wind and afternoon sun pick the zone: Gad Valley, Peruvian or Mineral Basin.</p></div>
         <div><div class="n mono">04</div><h4>More skiing, less waiting</h4><p>Laps on lifts that share a base, the Tram only when it's worth it, and parking that's open when you arrive.</p></div>
       </div>
@@ -277,7 +279,7 @@
       <p class="sub">Everyone gets the daily brief. Tell us how you ski, and the plan fits you.</p>
       <div class="tiers">
         <div class="tier">
-          <div class="eyebrow mono">Free</div>
+          <div class="eyebrow mono">Free for the 2026–27 season</div>
           <h4>Daily brief</h4>
           <ul>
             <li>Today's call: GO, DECENT or SKIP</li>
@@ -287,11 +289,11 @@
           </ul>
         </div>
         <div class="tier">
-          <div class="eyebrow mono">Free while in beta</div>
+          <div class="eyebrow mono">Free for the 2026–27 season</div>
           <h4>Your game plan</h4>
           <ul>
             <li>Your arrival time and how long you ski <span class="soon">Soon</span></li>
-            <li>Skier or snowboarder, and your ability <span class="soon">Soon</span></li>
+            <li>Skier or snowboarder, and your ability level: beginner to expert <span class="soon">Soon</span></li>
             <li>Terrain you love: groomers, trees, steeps, bowls <span class="soon">Soon</span></li>
             <li>Driving, carpool or the UTA ski bus <span class="soon">Soon</span></li>
             <li>Only email me on GO days or powder days <span class="soon">Soon</span></li>
@@ -314,7 +316,7 @@
     <div class="wrap faq">
       <div class="eyebrow mono">FAQ</div>
       <h2>Questions</h2>
-      <details><summary>Is it really free?</summary><p>Yes. BirdBrief is a passion project by a Snowbird local. The daily brief stays free.</p></details>
+      <details><summary>Is it really free?</summary><p>Yes. BirdBrief is free for the whole 2026–27 ski and snowboard season, including the personalized game plan. It is a passion project by a Snowbird local.</p></details>
       <details><summary>Is this affiliated with Snowbird?</summary><p>No. BirdBrief is independent and isn't affiliated with or endorsed by Snowbird, UDOT or any forecaster it cites. Always check the official lift, road and avalanche reports before you go.</p></details>
       <details><summary>Where does the data come from?</summary><p>The Snowbird SNOTEL snow station and nearby stations, the National Weather Service, the Utah Avalanche Center, UDOT, Snowbird's public pages and cameras, and Chris Tomer's mountain weather videos, credited and linked in every email.</p></details>
       <details><summary>What about other resorts?</summary><p>Snowbird first. Alta, Brighton and Solitude are next if enough of you ask.</p></details>
@@ -326,7 +328,7 @@
     <div class="wrap">
       <div class="eyebrow mono">Opening day is Wed, Nov 25</div>
       <h2>Be on the <em>first chair</em> with a plan.</h2>
-      <p class="sub" style="margin:0 auto 28px;color:rgba(255,255,255,.75);">Free, one email a day, unsubscribe anytime.</p>
+      <p class="sub" style="margin:0 auto 28px;color:rgba(255,255,255,.75);">Free all 2026–27 season. One email a day, unsubscribe anytime.</p>
       <form class="signup" id="signup2">
         <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
         <button type="submit">Get the brief</button>
