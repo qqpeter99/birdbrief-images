@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Build your game plan | BirdBrief</title>
+  <meta name="description" content="Tell us when you're going and how you ski. Get a personalized Snowbird game plan by email in minutes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="plan-page">
+  <div class="announce mono">Snowbird opens Wed, Nov 25 <b>·</b> Free for the 2026–27 season</div>
+
+  <header class="solid">
+    <div class="wrap">
+      <a class="logo" href="index.html">Bird<span>Brief</span></a>
+      <nav class="mono">
+        <a href="index.html#why">Why</a>
+        <a href="index.html#sample">Sample</a>
+        <a class="cta" href="index.html#subscribe">Daily brief</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap plan-wrap">
+    <div class="eyebrow mono">Game plan on demand</div>
+    <h1 class="plan-title">Build your game plan</h1>
+    <p class="sub">Answer a few quick questions. We'll check the latest snow, weather, avalanche, road and parking data and email your plan in a few minutes.</p>
+
+    <form id="plan" class="plan-form" novalidate>
+      <fieldset>
+        <legend><span class="q mono">01</span>When are you going?</legend>
+        <div class="choices">
+          <label><input type="radio" name="day" value="today" checked /><span>Today</span></label>
+          <label><input type="radio" name="day" value="tomorrow" /><span>Tomorrow</span></label>
+          <label class="with-input"><input type="radio" name="day" value="date" /><span>Pick a date <input type="date" name="date" aria-label="Date" /></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="q mono">02</span>Ski or snowboard?</legend>
+        <div class="choices">
+          <label><input type="radio" name="ride" value="ski" checked /><span>Ski</span></label>
+          <label><input type="radio" name="ride" value="snowboard" /><span>Snowboard</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="q mono">03</span>Your level</legend>
+        <div class="choices cards">
+          <label><input type="radio" name="level" value="learning" /><span><b>Learning</b><small>Greens and easy groomers</small></span></label>
+          <label><input type="radio" name="level" value="cruiser" checked /><span><b>Cruiser</b><small>Blue groomers, comfortable anywhere marked</small></span></label>
+          <label><input type="radio" name="level" value="advanced" /><span><b>Advanced</b><small>Blacks, bumps, some off-piste</small></span></label>
+          <label><input type="radio" name="level" value="expert" /><span><b>Expert</b><small>Cirque, chutes, big bowls</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="q mono">04</span>When will you arrive?</legend>
+        <div class="row">
+          <input type="time" name="arrive" value="09:00" step="900" required aria-label="Arrival time" />
+          <span class="hint">Lifts usually open at 9:00. Reserved lots open to everyone at 1pm.</span>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="q mono">05</span>How long will you ski or ride?</legend>
+        <div class="choices">
+          <label><input type="radio" name="hours" value="2" /><span>About 2 hours</span></label>
+          <label><input type="radio" name="hours" value="4" checked /><span>Half day</span></label>
+          <label><input type="radio" name="hours" value="7" /><span>Full day</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="q mono">06</span>How are you getting up the canyon?</legend>
+        <div class="choices">
+          <label><input type="radio" name="transport" value="drive" checked /><span>Drive</span></label>
+          <label><input type="radio" name="transport" value="carpool" /><span>Carpool</span></label>
+          <label><input type="radio" name="transport" value="bus" /><span>UTA ski bus</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="q mono">07</span>Terrain you love <span class="optional">Optional, pick any</span></legend>
+        <div class="choices">
+          <label><input type="checkbox" name="terrain" value="groomers" /><span>Groomers</span></label>
+          <label><input type="checkbox" name="terrain" value="bumps" /><span>Bumps</span></label>
+          <label><input type="checkbox" name="terrain" value="trees" /><span>Trees</span></label>
+          <label><input type="checkbox" name="terrain" value="steeps" /><span>Steeps</span></label>
+          <label><input type="checkbox" name="terrain" value="bowls" /><span>Bowls</span></label>
+          <label><input type="checkbox" name="terrain" value="park" /><span>Park</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="send">
+        <legend><span class="q mono">08</span>Where should we send it?</legend>
+        <div class="row">
+          <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
+          <button type="submit">Email my plan</button>
+        </div>
+        <p class="fine mono dark">Free · One email with your plan · We don't add you to the daily brief unless you ask</p>
+        <label class="optin"><input type="checkbox" name="subscribe" /> Also send me the free daily brief</label>
+      </fieldset>
+    </form>
+
+    <div id="done" class="done" hidden>
+      <div class="eyebrow mono">Preview</div>
+      <h2>Your plan is on its way</h2>
+      <p>In the live version, your game plan arrives by email in a few minutes. This is a preview, so nothing was sent and nothing was saved. Here's what we'd plan for:</p>
+      <ul id="summary"></ul>
+      <a class="btn" href="plan.html">Build another plan</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>BirdBrief is independent and not affiliated with Snowbird. Check official reports before heading up the canyon.</span>
+      <a href="index.html">Back to BirdBrief</a>
+    </div>
+  </footer>
+
+  <script>
+    // Preview only: nothing is sent or stored. In the live version this posts
+    // to a small backend that starts the plan job and emails the result.
+    const form = document.getElementById('plan');
+    const dateInput = form.querySelector('input[name=date]');
+    dateInput.min = new Date().toISOString().slice(0, 10);
+    dateInput.addEventListener('focus', () => { form.querySelector('input[name=day][value=date]').checked = true; });
+
+    const label = (name, value) => form.querySelector(`input[name=${name}][value="${value}"]`)?.closest('label')?.querySelector('b, span')?.firstChild?.textContent.trim() || value;
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const f = new FormData(form);
+      const day = f.get('day') === 'date' ? (f.get('date') || 'a date you pick') : f.get('day');
+      const [h, m] = f.get('arrive').split(':').map(Number);
+      const arrive = new Date(2000, 0, 1, h, m).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+      const terrain = f.getAll('terrain').map(t => label('terrain', t));
+      const items = [
+        ['When', day[0].toUpperCase() + day.slice(1) + `, arriving ${arrive}`],
+        ['Riding', `${label('ride', f.get('ride'))}, ${label('level', f.get('level'))} level`],
+        ['Time on the mountain', label('hours', f.get('hours'))],
+        ['Getting there', label('transport', f.get('transport'))],
+        ['Terrain', terrain.length ? terrain.join(', ') : 'No preference'],
+        ['Send to', f.get('email') + (f.get('subscribe') ? ' (plus the daily brief)' : '')],
+      ];
+      const ul = document.getElementById('summary');
+      ul.replaceChildren(...items.map(([k, v]) => {
+        const li = document.createElement('li');
+        const b = document.createElement('b');
+        b.textContent = k;
+        li.append(b, document.createTextNode(v));
+        return li;
+      }));
+      form.hidden = true;
+      document.getElementById('done').hidden = false;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
