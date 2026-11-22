@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BirdBrief: your daily Snowbird game plan</title>
   <meta name="description" content="A free daily email for Snowbird skiers and snowboarders: today's call, where to park, which lifts to lap, and what's coming." />
-  <meta property="og:image" content="images/hero-tram.jpg" />
+  <meta property="og:image" content="images/hero-tram-bluebird.jpg" />
   <!-- Free Google Fonts, chosen as stand-ins for Glade's paid type:
        Archivo (grotesk, like Synthese), DM Mono (like Calling Code),
        Fraunces (soft serif, like New Spirit). -->
@@ -34,9 +34,14 @@
 
     /* Hero: full-bleed photo, header sits on top of it */
     .hero { position: relative; min-height: min(88vh, 780px); display: flex; flex-direction: column; color: #fff;
-      background: #222 url("images/hero-tram.jpg") center 40% / cover no-repeat; }
+      background: #6f9cc8 url("images/hero-tram-bluebird.jpg") 65% 38% / cover no-repeat; }
+    /* Keep the bluebird sky and the red Tram bright on the right; shade only
+       the left side and the top, where the text and nav sit. */
     .hero::before { content: ""; position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(20,19,17,.55) 0%, rgba(20,19,17,.15) 35%, rgba(20,19,17,.55) 70%, rgba(20,19,17,.85) 100%); }
+      background:
+        linear-gradient(180deg, rgba(14,24,34,.45) 0%, rgba(14,24,34,0) 22%),
+        linear-gradient(90deg, rgba(14,24,34,.78) 0%, rgba(14,24,34,.5) 38%, rgba(14,24,34,0) 66%); }
+    .hero h1, .hero p.lede { text-shadow: 0 2px 18px rgba(0,0,0,.25); }
     .hero > * { position: relative; }
     header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
     .logo { font-weight: 900; font-size: 22px; letter-spacing: -.01em; text-transform: uppercase; text-decoration: none; }
@@ -129,6 +134,7 @@
       .tier + .tier { border-left: 0; border-top: 1px solid var(--ink); }
     }
     @media (max-width: 560px) {
+      .hero::before { background: linear-gradient(180deg, rgba(14,24,34,.4) 0%, rgba(14,24,34,.2) 28%, rgba(14,24,34,.72) 55%, rgba(14,24,34,.82) 100%); }
       .why, .plans { grid-template-columns: 1fr; }
       form.signup { flex-direction: column; }
       nav a:not(.cta) { display: none; }
@@ -169,13 +175,13 @@
   <section id="why">
     <div class="wrap">
       <div class="eyebrow mono">Why BirdBrief</div>
-      <h2>Six websites. One plan.</h2>
-      <p class="sub">Resort pages tell you what's open. BirdBrief tells you what to do about it.</p>
+      <h2>We make the call.<br />You make the turns.</h2>
+      <p class="sub">BirdBrief reads every report so you don't have to, then hands you a clear decision and a lift-by-lift game plan for the best snow of the day.</p>
       <div class="why">
-        <div><div class="n mono">01</div><h4>The call</h4><p>GO, DECENT or SKIP for your ski window, backed by the measured numbers.</p></div>
-        <div><div class="n mono">02</div><h4>Your game plan</h4><p>First lift, warm-up, then laps in order, finishing at your car.</p></div>
-        <div><div class="n mono">03</div><h4>Parking that's open</h4><p>The right lots for when you actually arrive, before 1pm or after.</p></div>
-        <div><div class="n mono">04</div><h4>What's coming</h4><p>Storm timing from the models and Chris Tomer's daily mountain forecast.</p></div>
+        <div><div class="n mono">01</div><h4>Go or wait?</h4><p>GO, DECENT or SKIP for your ski window, so you never burn a day on bad snow or miss a great one.</p></div>
+        <div><div class="n mono">02</div><h4>Your game plan</h4><p>Where to park, your first lift, a warm-up, then laps in order, ending back at your car.</p></div>
+        <div><div class="n mono">03</div><h4>Chase the best snow</h4><p>New snow, wind and afternoon sun pick the zone: Gad Valley, Peruvian or Mineral Basin.</p></div>
+        <div><div class="n mono">04</div><h4>More skiing, less waiting</h4><p>Laps on lifts that share a base, the Tram only when it's worth it, and parking that's open when you arrive.</p></div>
       </div>
     </div>
   </section>
@@ -312,7 +318,7 @@
   <footer>
     <div class="wrap">
       <span>BirdBrief is independent and not affiliated with Snowbird. Check official reports before heading up the canyon.</span>
-      <span>Hero photo: <a href="https://unsplash.com/photos/D5FrbN_sDNs">Tyson Dudley on Unsplash</a></span>
+      <span>Hero photo: <a href="https://commons.wikimedia.org/wiki/File:Snowbird_Tram_at_Hidden_Peak.jpg">"Snowbird Tram at Hidden Peak"</a> by VeggieGarden, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, resized</span>
     </div>
   </footer>
 
