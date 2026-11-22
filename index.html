@@ -5,246 +5,327 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BirdBrief: your daily Snowbird game plan</title>
   <meta name="description" content="A free daily email for Snowbird skiers and snowboarders: today's call, where to park, which lifts to lap, and what's coming." />
+  <meta property="og:image" content="images/hero-tram.jpg" />
+  <!-- Free Google Fonts, chosen as stand-ins for Glade's paid type:
+       Archivo (grotesk, like Synthese), DM Mono (like Calling Code),
+       Fraunces (soft serif, like New Spirit). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --ink: #14202b; --muted: #5b6b78; --line: #e3e8ec; --bg: #ffffff; --soft: #f5f8fa;
-      --brand: #0a4f7a; --go: #1f7a3a; --decent: #a86a00; --skip: #b3261e;
+      --ink: #2c2a26; --ink-2: #41403e; --muted: #6f6b64; --line: #e4e0d8;
+      --paper: #ffffff; --cream: #f6f4ef; --accent: #ec572e; --accent-dark: #c9431f;
+      --go: #2f7a3e; --decent: #b07a12; --skip: #b3261e;
+      --sans: "Archivo", -apple-system, "Segoe UI", sans-serif;
+      --mono: "DM Mono", ui-monospace, "Courier New", monospace;
+      --serif: "Fraunces", Georgia, serif;
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
-    a { color: var(--brand); }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-    header { border-bottom: 1px solid var(--line); }
-    header .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-    .logo { font-weight: 800; font-size: 20px; letter-spacing: -.02em; color: var(--ink); text-decoration: none; }
-    .logo span { color: var(--brand); }
-    nav a { margin-left: 18px; font-size: 14px; color: var(--muted); text-decoration: none; }
-    nav a:hover { color: var(--ink); }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--sans); color: var(--ink); background: var(--paper); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .mono { font-family: var(--mono); text-transform: uppercase; letter-spacing: .08em; font-size: 12px; }
 
-    .hero { padding: 64px 0 40px; text-align: center; }
-    .hero h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 14px; }
-    .hero p.lede { font-size: 18px; color: var(--muted); max-width: 580px; margin: 0 auto 28px; }
-    form.signup { display: flex; gap: 8px; max-width: 480px; margin: 0 auto; }
-    form.signup input[type=email] { flex: 1; padding: 13px 14px; font-size: 16px; border: 1px solid #c9d3da; border-radius: 8px; }
-    button { padding: 13px 20px; font-size: 16px; font-weight: 700; color: #fff; background: var(--brand); border: 0; border-radius: 8px; cursor: pointer; }
-    button:hover { background: #083f62; }
-    .fine { font-size: 13px; color: var(--muted); margin-top: 10px; }
-    .thanks { display: none; max-width: 480px; margin: 0 auto; padding: 14px; background: var(--soft); border-radius: 8px; font-size: 15px; }
+    /* Announcement bar */
+    .announce { background: var(--ink); color: #fff; text-align: center; padding: 9px 16px; }
+    .announce b { color: var(--accent); font-weight: 500; }
 
-    section { padding: 44px 0; border-top: 1px solid var(--line); }
-    h2 { font-size: 24px; letter-spacing: -.01em; margin: 0 0 8px; }
-    .sub { color: var(--muted); margin: 0 0 24px; }
+    /* Hero: full-bleed photo, header sits on top of it */
+    .hero { position: relative; min-height: min(88vh, 780px); display: flex; flex-direction: column; color: #fff;
+      background: #222 url("images/hero-tram.jpg") center 40% / cover no-repeat; }
+    .hero::before { content: ""; position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(20,19,17,.55) 0%, rgba(20,19,17,.15) 35%, rgba(20,19,17,.55) 70%, rgba(20,19,17,.85) 100%); }
+    .hero > * { position: relative; }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { font-weight: 900; font-size: 22px; letter-spacing: -.01em; text-transform: uppercase; text-decoration: none; }
+    .logo span { color: var(--accent); }
+    nav a { margin-left: 22px; text-decoration: none; opacity: .85; }
+    nav a:hover { opacity: 1; }
+    .hero-body { margin-top: auto; padding-bottom: 64px; width: 100%; }
+    .hero h1 { font-weight: 900; text-transform: uppercase; font-size: clamp(40px, 7vw, 88px); line-height: .95; letter-spacing: -.02em; margin: 14px 0 18px; max-width: 900px; }
+    .hero h1 em { font-family: var(--serif); font-style: italic; font-weight: 500; text-transform: none; letter-spacing: -.01em; }
+    .hero p.lede { font-size: 19px; max-width: 560px; margin: 0 0 28px; color: rgba(255,255,255,.9); }
+    form.signup { display: flex; gap: 8px; max-width: 520px; }
+    form.signup input[type=email] { flex: 1; padding: 15px 16px; font: 16px var(--sans); border: 0; border-radius: 2px; }
+    button, .btn { font: 500 13px var(--mono); text-transform: uppercase; letter-spacing: .1em; color: #fff; background: var(--accent); border: 0; border-radius: 2px; padding: 15px 22px; cursor: pointer; text-decoration: none; display: inline-block; }
+    button:hover, .btn:hover { background: var(--accent-dark); }
+    .fine { margin-top: 12px; color: rgba(255,255,255,.75); }
+    .thanks { display: none; max-width: 520px; padding: 14px 16px; background: rgba(255,255,255,.12); border-left: 3px solid var(--accent); }
+
+    /* Sections */
+    section { padding: 88px 0; }
+    section.cream { background: var(--cream); }
+    .eyebrow { color: var(--accent); margin-bottom: 10px; }
+    h2 { font-weight: 900; text-transform: uppercase; font-size: clamp(30px, 4.4vw, 48px); line-height: 1; letter-spacing: -.015em; margin: 0 0 14px; }
+    .sub { color: var(--muted); font-size: 18px; max-width: 620px; margin: 0 0 40px; }
+
+    /* Why BirdBrief: value props */
+    .why { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .why .n { color: var(--accent); }
+    .why h4 { font-size: 19px; font-weight: 800; margin: 10px 0 6px; }
+    .why p { margin: 0; color: var(--muted); font-size: 15px; }
 
     /* Sample brief, styled like the email */
-    .email { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 6px 24px rgba(20,32,43,.06); }
-    .email .bar { background: var(--soft); padding: 10px 16px; font-size: 13px; color: var(--muted); border-bottom: 1px solid var(--line); }
-    .email .body { padding: 20px; }
-    .email h3 { margin: 0 0 12px; font-size: 17px; color: var(--brand); }
-    .call { font-size: 17px; font-weight: 600; margin: 0 0 18px; }
-    .badge { display: inline-block; padding: 1px 8px; border-radius: 4px; color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .04em; margin-right: 6px; vertical-align: 2px; }
+    .sample-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px; align-items: start; }
+    .email { background: #fff; border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(44,42,38,.12); }
+    .email .bar { padding: 12px 18px; border-bottom: 1px solid var(--line); color: var(--muted); }
+    .email .body { padding: 22px; }
+    .email h3 { margin: 0 0 12px; font-size: 18px; font-weight: 800; color: #0a4f7a; }
+    .call { font-size: 17px; font-weight: 600; margin: 0 0 16px; }
+    .badge { display: inline-block; padding: 2px 8px; color: #fff; font: 500 12px var(--mono); letter-spacing: .08em; margin-right: 6px; vertical-align: 2px; }
     .badge.go { background: var(--go); } .badge.decent { background: var(--decent); } .badge.skip { background: var(--skip); }
-    .label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #889; margin: 18px 0 6px; }
-    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .plan { background: var(--soft); border-radius: 8px; padding: 12px 14px; font-size: 14px; }
+    .label { color: #8a857c; margin: 18px 0 8px; }
+    .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .plan { background: var(--cream); padding: 12px 14px; font-size: 14px; }
     .plan b { display: block; margin-bottom: 6px; }
     .plan ul { margin: 0; padding-left: 18px; }
     table.metrics { border-collapse: collapse; font-size: 14px; width: 100%; }
-    table.metrics td { padding: 4px 10px 4px 0; }
+    table.metrics td { padding: 4px 10px 4px 0; border-bottom: 1px dashed var(--line); }
     table.metrics td:first-child { color: var(--muted); }
-    table.metrics td:last-child { font-weight: 600; }
+    table.metrics td:last-child { font-family: var(--mono); }
     .forecast p { margin: 0 0 8px; font-size: 15px; }
     .forecast .watch { font-size: 13px; color: var(--muted); }
+    .sample-copy li { margin-bottom: 14px; }
+    .sample-copy b { display: block; font-size: 17px; }
+    .sample-copy span { color: var(--muted); }
+    .sample-copy ul { list-style: none; padding: 0; margin: 0 0 28px; }
 
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .step { padding: 16px; border: 1px solid var(--line); border-radius: 10px; }
-    .step .n { font-weight: 800; color: var(--brand); font-size: 13px; }
-    .step h4 { margin: 4px 0 6px; font-size: 16px; }
-    .step p { margin: 0; font-size: 14px; color: var(--muted); }
+    /* Make it yours */
+    .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--ink); }
+    .tier { padding: 32px; }
+    .tier + .tier { border-left: 1px solid var(--ink); background: var(--ink); color: #fff; }
+    .tier h4 { font-size: 26px; font-weight: 900; text-transform: uppercase; margin: 8px 0 14px; }
+    .tier ul { padding-left: 18px; margin: 0; }
+    .tier li { margin-bottom: 8px; }
+    .tier .eyebrow { margin: 0; }
+    .soon { font: 500 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink); background: var(--accent); padding: 2px 6px; margin-left: 6px; vertical-align: 2px; }
 
-    .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .tier { border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
-    .tier.custom { border-color: var(--brand); }
-    .tier h4 { margin: 0 0 4px; font-size: 17px; }
-    .tier .tag { font-size: 12px; font-weight: 700; color: var(--brand); text-transform: uppercase; letter-spacing: .06em; }
-    .tier ul { padding-left: 18px; margin: 10px 0 0; font-size: 14px; }
-    .tier li { margin-bottom: 6px; }
-    .soon { font-size: 11px; font-weight: 700; color: var(--decent); background: #fff4e0; padding: 1px 6px; border-radius: 4px; margin-left: 4px; }
+    /* Sources strip */
+    .sources { display: flex; flex-wrap: wrap; gap: 10px 28px; color: var(--muted); }
 
-    details { border-bottom: 1px solid var(--line); padding: 12px 0; }
-    summary { font-weight: 600; cursor: pointer; }
-    details p { color: var(--muted); margin: 8px 0 0; font-size: 15px; }
+    /* FAQ */
+    .faq { max-width: 760px; }
+    details { border-top: 1px solid var(--line); padding: 18px 0; }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { font-weight: 700; font-size: 18px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
+    summary::after { content: "+"; font-family: var(--mono); color: var(--accent); }
+    details[open] summary::after { content: "–"; }
+    details p { color: var(--muted); margin: 10px 0 0; }
 
-    footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: 13px; color: var(--muted); }
+    /* Closing CTA */
+    .closer { background: var(--ink); color: #fff; text-align: center; }
+    .closer h2 em { font-family: var(--serif); font-style: italic; font-weight: 500; text-transform: none; }
+    .closer form.signup { margin: 0 auto; }
 
-    @media (max-width: 640px) {
-      .plans, .steps, .tiers { grid-template-columns: 1fr; }
+    footer { background: #1d1c19; color: rgba(255,255,255,.6); padding: 32px 0; font-size: 13px; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    footer a { color: rgba(255,255,255,.8); }
+
+    @media (max-width: 860px) {
+      .why { grid-template-columns: 1fr 1fr; }
+      .sample-grid, .tiers { grid-template-columns: 1fr; }
+      .tier + .tier { border-left: 0; border-top: 1px solid var(--ink); }
+    }
+    @media (max-width: 560px) {
+      .why, .plans { grid-template-columns: 1fr; }
       form.signup { flex-direction: column; }
       nav a:not(.cta) { display: none; }
+      section { padding: 64px 0; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <a class="logo" href="#">Bird<span>Brief</span></a>
-      <nav>
-        <a href="#sample">Sample</a>
-        <a href="#how">How it works</a>
-        <a href="#yours">Make it yours</a>
-        <a href="#faq">FAQ</a>
-        <a class="cta" href="#subscribe">Subscribe</a>
-      </nav>
-    </div>
-  </header>
+  <div class="announce mono">Snowbird opens Fri, Nov 27 <b>·</b> Free daily game plan by 9am MT</div>
 
-  <main>
-    <div class="hero wrap" id="subscribe">
-      <h1>Your Snowbird game plan,<br />in your inbox every morning</h1>
-      <p class="lede">A free daily email that reads the snow, weather, avalanche, canyon road and parking data, then tells you whether to go, where to park and which lifts to lap.</p>
+  <div class="hero">
+    <header>
+      <div class="wrap">
+        <a class="logo" href="#">Bird<span>Brief</span></a>
+        <nav class="mono">
+          <a href="#why">Why</a>
+          <a href="#sample">Sample</a>
+          <a href="#yours">Make it yours</a>
+          <a href="#faq">FAQ</a>
+          <a class="cta" href="#subscribe">Subscribe</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero-body wrap" id="subscribe">
+      <div class="mono">Daily brief · Snowbird, Utah</div>
+      <h1>Ski the right lift at the <em>right time.</em></h1>
+      <p class="lede">A free morning email that reads the snow, weather, avalanche, canyon road and parking data, then tells you whether to go, where to park and which lifts to lap.</p>
       <form class="signup" id="signup">
         <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
-        <button type="submit">Subscribe</button>
+        <button type="submit">Get the brief</button>
       </form>
       <div class="thanks" id="thanks">Thanks! Signups open soon. This is a preview, so your email wasn't saved yet.</div>
-      <p class="fine">Free. One email a day around 9am MT. Unsubscribe anytime.</p>
+      <p class="fine mono">Free · One email a day · Unsubscribe anytime</p>
     </div>
+  </div>
 
-    <section id="sample">
-      <div class="wrap">
+  <section id="why">
+    <div class="wrap">
+      <div class="eyebrow mono">Why BirdBrief</div>
+      <h2>Six websites. One plan.</h2>
+      <p class="sub">Resort pages tell you what's open. BirdBrief tells you what to do about it.</p>
+      <div class="why">
+        <div><div class="n mono">01</div><h4>The call</h4><p>GO, DECENT or SKIP for your ski window, backed by the measured numbers.</p></div>
+        <div><div class="n mono">02</div><h4>Your game plan</h4><p>First lift, warm-up, then laps in order, finishing at your car.</p></div>
+        <div><div class="n mono">03</div><h4>Parking that's open</h4><p>The right lots for when you actually arrive, before 1pm or after.</p></div>
+        <div><div class="n mono">04</div><h4>What's coming</h4><p>Storm timing from the models and Chris Tomer's daily mountain forecast.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sample" class="cream">
+    <div class="wrap sample-grid">
+      <div class="sample-copy">
+        <div class="eyebrow mono">The daily brief</div>
         <h2>What lands in your inbox</h2>
         <p class="sub">A real brief from Nov 22, 2026, trimmed a little.</p>
-        <div class="email">
-          <div class="bar">BirdBrief SKIP - Sun, Nov 22</div>
-          <div class="body">
-            <h3>BirdBrief - Sun, Nov 22</h3>
-            <p class="call"><span class="badge skip">SKIP</span>Lift-served skiing isn't available yet. Snowbird is scheduled to open for the season on November 27.</p>
+        <ul>
+          <li><b>The call</b><span>One word and one reason.</span></li>
+          <li><b>Plan A and Plan B</b><span>Lift-by-lift, for before 1pm and after.</span></li>
+          <li><b>Conditions and forecast</b><span>Snowfall, base, crowds and the week ahead.</span></li>
+          <li><b>Live cameras</b><span>What each camera shows right now.</span></li>
+        </ul>
+        <a class="btn" href="#subscribe">Get tomorrow's brief</a>
+      </div>
 
-            <div class="label">Game plan (preview until lifts open)</div>
-            <div class="plans">
-              <div class="plan">
-                <b>Plan A: arriving before 1pm</b>
-                <ul>
-                  <li>Park: free first-come lots by Gad Valley</li>
-                  <li>Warm-up: Gadzoom to Chip's Face</li>
-                  <li>Lap Gadzoom to Regulator</li>
-                  <li>Mid-Gad to Primrose Path</li>
-                  <li>Finish: Big Emma to your car</li>
-                </ul>
-              </div>
-              <div class="plan">
-                <b>Plan B: arriving 1pm or later</b>
-                <ul>
-                  <li>Park: reserved lots open to all after 1pm</li>
-                  <li>Warm-up: Peruvian Express to Bassackwards</li>
-                  <li>Peruvian Tunnel to Mineral Basin</li>
-                  <li>Lap Mineral Basin Express</li>
-                  <li>Finish: Hidden Peak to Chip's Run</li>
-                </ul>
-              </div>
+      <div class="email">
+        <div class="bar mono">BirdBrief SKIP · Sun, Nov 22</div>
+        <div class="body">
+          <h3>BirdBrief - Sun, Nov 22</h3>
+          <p class="call"><span class="badge skip">SKIP</span>Lift-served skiing isn't available yet. Snowbird is scheduled to open for the season on November 27.</p>
+
+          <div class="label mono">Game plan · preview until lifts open</div>
+          <div class="plans">
+            <div class="plan">
+              <b>Plan A: arriving before 1pm</b>
+              <ul>
+                <li>Park: free first-come lots by Gad Valley</li>
+                <li>Warm-up: Gadzoom to Chip's Face</li>
+                <li>Lap Gadzoom to Regulator</li>
+                <li>Mid-Gad to Primrose Path</li>
+                <li>Finish: Big Emma to your car</li>
+              </ul>
             </div>
-
-            <div class="label">Conditions</div>
-            <table class="metrics">
-              <tr><td>Snowfall, past 24 hours</td><td>0"</td></tr>
-              <tr><td>Snowfall, past 2 / 3 days</td><td>0" / 6"</td></tr>
-              <tr><td>Base @ 9,170 ft</td><td>26"</td></tr>
-              <tr><td>Crowd estimate</td><td>Moderate (weekend)</td></tr>
-            </table>
-
-            <div class="label">Forecast</div>
-            <div class="forecast">
-              <p>Uphill travel is closed for snowmaking, so stay off the mountain. Opening day Friday brings about an inch, with more substantial snow around December 1.</p>
-              <p>Utah's Wasatch will see small waves of snow around Nov 26-27 and Nov 28-Dec 1, with about a foot possible in the Cottonwoods by December 1.</p>
-              <p class="watch">Watch: Mountain Weather Update 11/22, Meteorologist Chris Tomer (YouTube)</p>
+            <div class="plan">
+              <b>Plan B: arriving 1pm or later</b>
+              <ul>
+                <li>Park: reserved lots open to all after 1pm</li>
+                <li>Warm-up: Peruvian Express to Bassackwards</li>
+                <li>Peruvian Tunnel to Mineral Basin</li>
+                <li>Lap Mineral Basin Express</li>
+                <li>Finish: Hidden Peak to Chip's Run</li>
+              </ul>
             </div>
+          </div>
 
-            <div class="label">Live conditions</div>
-            <p style="margin:0;font-size:14px;color:var(--muted);">Peruvian Gulch, the snow stake, the canyon road and more, with what each camera shows right now.</p>
+          <div class="label mono">Conditions</div>
+          <table class="metrics">
+            <tr><td>Snowfall, past 24 hours</td><td>0"</td></tr>
+            <tr><td>Snowfall, past 2 / 3 days</td><td>0" / 6"</td></tr>
+            <tr><td>Base @ 9,170 ft</td><td>26"</td></tr>
+            <tr><td>Crowd estimate</td><td>Moderate (weekend)</td></tr>
+          </table>
+
+          <div class="label mono">Forecast</div>
+          <div class="forecast">
+            <p>Uphill travel is closed for snowmaking, so stay off the mountain. Opening day Friday brings about an inch, with more substantial snow around December 1.</p>
+            <p>Utah's Wasatch will see small waves of snow around Nov 26-27 and Nov 28-Dec 1, with about a foot possible in the Cottonwoods by December 1.</p>
+            <p class="watch">Watch: Mountain Weather Update 11/22, Meteorologist Chris Tomer (YouTube)</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="how">
-      <div class="wrap">
-        <h2>How it works</h2>
-        <p class="sub">The data you'd check on six websites, turned into one plan.</p>
-        <div class="steps">
-          <div class="step">
-            <div class="n">1</div>
-            <h4>We gather</h4>
-            <p>Snow station readings, the NWS forecast, Utah Avalanche Center, UDOT canyon road status, parking rules, live cameras and Chris Tomer's daily mountain forecast.</p>
-          </div>
-          <div class="step">
-            <div class="n">2</div>
-            <h4>AI makes the call</h4>
-            <p>GO, DECENT or SKIP, then a lift-by-lift game plan built around the snow, the sun, the crowds and when you arrive.</p>
-          </div>
-          <div class="step">
-            <div class="n">3</div>
-            <h4>You ski smarter</h4>
-            <p>One email by about 9am MT. Read it over coffee, pick your plan, and head up the canyon.</p>
-          </div>
+  <section id="yours">
+    <div class="wrap">
+      <div class="eyebrow mono">Make it yours</div>
+      <h2>Start simple. Then tune it.</h2>
+      <p class="sub">Everyone gets the daily brief. Tell us how you ski, and the plan fits you.</p>
+      <div class="tiers">
+        <div class="tier">
+          <div class="eyebrow mono">Free</div>
+          <h4>Daily brief</h4>
+          <ul>
+            <li>Today's call: GO, DECENT or SKIP</li>
+            <li>Two game plans: before 1pm and after</li>
+            <li>Parking that's open when you arrive</li>
+            <li>Snowfall, forecast and live cameras</li>
+          </ul>
+        </div>
+        <div class="tier">
+          <div class="eyebrow mono">Free while in beta</div>
+          <h4>Your game plan</h4>
+          <ul>
+            <li>Your arrival time and how long you ski <span class="soon">Soon</span></li>
+            <li>Skier or snowboarder, and your ability <span class="soon">Soon</span></li>
+            <li>Terrain you love: groomers, trees, steeps, bowls <span class="soon">Soon</span></li>
+            <li>Driving, carpool or the UTA ski bus <span class="soon">Soon</span></li>
+            <li>Only email me on GO days or powder days <span class="soon">Soon</span></li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="yours">
-      <div class="wrap">
-        <h2>Make it yours</h2>
-        <p class="sub">Start with the daily brief. Tell us how you ski, and the plan fits you.</p>
-        <div class="tiers">
-          <div class="tier">
-            <div class="tag">Free</div>
-            <h4>Daily brief</h4>
-            <ul>
-              <li>Today's call: GO, DECENT or SKIP</li>
-              <li>Two game plans: before 1pm and after</li>
-              <li>Parking that's actually open when you arrive</li>
-              <li>Snowfall, forecast and live cameras</li>
-            </ul>
-          </div>
-          <div class="tier custom">
-            <div class="tag">Free while in beta</div>
-            <h4>Your game plan</h4>
-            <ul>
-              <li>Your arrival time and how long you ski <span class="soon">Soon</span></li>
-              <li>Skier or snowboarder, and your ability <span class="soon">Soon</span></li>
-              <li>Terrain you love: groomers, trees, steeps, bowls <span class="soon">Soon</span></li>
-              <li>Driving, carpool or the UTA ski bus <span class="soon">Soon</span></li>
-              <li>Only email me on GO days or powder days <span class="soon">Soon</span></li>
-            </ul>
-          </div>
-        </div>
+  <section class="cream" style="padding:48px 0;">
+    <div class="wrap">
+      <div class="eyebrow mono">Built on</div>
+      <div class="sources mono">
+        <span>SNOTEL snow stations</span><span>National Weather Service</span><span>Utah Avalanche Center</span><span>UDOT Cottonwood Canyons</span><span>Snowbird cameras</span><span>Chris Tomer</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="faq">
-      <div class="wrap">
-        <h2>Questions</h2>
-        <details><summary>Is it really free?</summary><p>Yes. BirdBrief is a passion project by a Snowbird local. The daily brief stays free.</p></details>
-        <details><summary>Is this affiliated with Snowbird?</summary><p>No. BirdBrief is independent and isn't affiliated with or endorsed by Snowbird, UDOT or any forecaster it cites. Always check the official lift, road and avalanche reports before you go.</p></details>
-        <details><summary>Where does the data come from?</summary><p>The Snowbird SNOTEL snow station and nearby stations, the National Weather Service, the Utah Avalanche Center, UDOT, Snowbird's public pages and cameras, and Chris Tomer's mountain weather videos, credited and linked in every email.</p></details>
-        <details><summary>What about other resorts?</summary><p>Snowbird first. Alta, Brighton and Solitude are next if enough of you ask.</p></details>
-        <details><summary>What do you do with my email?</summary><p>We only use it to send your brief. No selling, no sharing, and every email has a one-click unsubscribe.</p></details>
-      </div>
-    </section>
-  </main>
+  <section id="faq">
+    <div class="wrap faq">
+      <div class="eyebrow mono">FAQ</div>
+      <h2>Questions</h2>
+      <details><summary>Is it really free?</summary><p>Yes. BirdBrief is a passion project by a Snowbird local. The daily brief stays free.</p></details>
+      <details><summary>Is this affiliated with Snowbird?</summary><p>No. BirdBrief is independent and isn't affiliated with or endorsed by Snowbird, UDOT or any forecaster it cites. Always check the official lift, road and avalanche reports before you go.</p></details>
+      <details><summary>Where does the data come from?</summary><p>The Snowbird SNOTEL snow station and nearby stations, the National Weather Service, the Utah Avalanche Center, UDOT, Snowbird's public pages and cameras, and Chris Tomer's mountain weather videos, credited and linked in every email.</p></details>
+      <details><summary>What about other resorts?</summary><p>Snowbird first. Alta, Brighton and Solitude are next if enough of you ask.</p></details>
+      <details><summary>What do you do with my email?</summary><p>We only use it to send your brief. No selling, no sharing, and every email has a one-click unsubscribe.</p></details>
+    </div>
+  </section>
+
+  <section class="closer">
+    <div class="wrap">
+      <div class="eyebrow mono">Opening day is Nov 27</div>
+      <h2>Be on the <em>first chair</em> with a plan.</h2>
+      <p class="sub" style="margin:0 auto 28px;color:rgba(255,255,255,.75);">Free, one email a day, unsubscribe anytime.</p>
+      <form class="signup" id="signup2">
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
+        <button type="submit">Get the brief</button>
+      </form>
+      <div class="thanks" id="thanks2" style="margin:0 auto;">Thanks! Signups open soon. This is a preview, so your email wasn't saved yet.</div>
+    </div>
+  </section>
 
   <footer>
     <div class="wrap">
-      BirdBrief is independent and not affiliated with Snowbird. Conditions change fast, so check official reports before heading up the canyon.
+      <span>BirdBrief is independent and not affiliated with Snowbird. Check official reports before heading up the canyon.</span>
+      <span>Hero photo: <a href="https://unsplash.com/photos/D5FrbN_sDNs">Tyson Dudley on Unsplash</a></span>
     </div>
   </footer>
 
   <script>
-    // Preview only: signups aren't stored yet. This will post to the signup
+    // Preview only: signups aren't stored yet. These will post to the signup
     // backend once it exists.
-    document.getElementById('signup').addEventListener('submit', e => {
-      e.preventDefault();
-      e.target.style.display = 'none';
-      document.getElementById('thanks').style.display = 'block';
-    });
+    for (const [formId, thanksId] of [['signup', 'thanks'], ['signup2', 'thanks2']]) {
+      document.getElementById(formId).addEventListener('submit', e => {
+        e.preventDefault();
+        e.target.style.display = 'none';
+        document.getElementById(thanksId).style.display = 'block';
+      });
+    }
   </script>
 </body>
 </html>
