@@ -188,3 +188,30 @@ header.solid { background: var(--ink); color: #fff; }
   .choices.cards { grid-template-columns: 1fr; }
   .done li { flex-direction: column; gap: 2px; }
 }
+
+/* ---- Two offerings: menu buttons, hero cards, closer ---- */
+nav .nav-btn { opacity: 1; margin-left: 14px; padding: 10px 14px; border-radius: 2px; background: var(--accent-btn); color: #fff; }
+nav .nav-btn.ghost { background: transparent; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.8); }
+nav .nav-btn:hover { background: var(--accent-dark); }
+nav .nav-btn.ghost:hover { background: rgba(255,255,255,.12); }
+.hero h1 { font-size: clamp(38px, 6vw, 76px); }
+.hero h1 em { display: block; font-size: .72em; margin-top: 6px; }
+.hero-offers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 920px; }
+.hero-offer { background: rgba(14,24,34,.62); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding: 20px 22px; border-top: 3px solid var(--accent); display: flex; flex-direction: column; }
+.hero-offer .tag { color: var(--accent); }
+.hero-offer h3 { margin: 6px 0 14px; font-size: 20px; font-weight: 800; }
+.hero-offer form.signup { max-width: none; }
+.hero-offer .fine { margin: 10px 0 0; }
+.btn.big { padding: 16px 22px; font-size: 14px; }
+.hero-offer .btn.big { align-self: flex-start; }
+.btn.ghost { background: transparent; box-shadow: inset 0 0 0 1.5px #fff; }
+.btn.ghost:hover { background: rgba(255,255,255,.12); }
+.why.three { grid-template-columns: repeat(3, 1fr); }
+.closer-ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+@media (max-width: 860px) {
+  .hero-offers, .why.three { grid-template-columns: 1fr; }
+  nav a:not(.nav-btn) { display: none; }
+}
+@media (max-width: 560px) {
+  nav .nav-btn.ghost { display: none; }
+}
