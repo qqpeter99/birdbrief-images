@@ -4,5 +4,5 @@
 // site key (public; the secret stays in the Worker).
 window.BIRDBRIEF = {
   api: 'https://birdbrief-api.birdbrief-api.workers.dev',
-  turnstileSiteKey: '',
+  turnstileSiteKey: '0x4AAAAAAGOHRMtB5x_txQNG',
 };
