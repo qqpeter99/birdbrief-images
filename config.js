@@ -3,6 +3,6 @@
 // e.g. 'https://birdbrief-api.<account>.workers.dev', and set the Turnstile
 // site key (public; the secret stays in the Worker).
 window.BIRDBRIEF = {
-  api: '',
+  api: 'https://birdbrief-api.birdbrief-api.workers.dev',
   turnstileSiteKey: '',
 };
