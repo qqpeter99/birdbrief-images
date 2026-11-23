@@ -278,3 +278,6 @@ button:disabled { opacity: .6; cursor: progress; }
 .resort-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 0 0 18px; }
 .resort.on-light { box-shadow: 0 0 0 2px var(--accent); }
 .soon-note { color: var(--muted); font-size: 14px; }
+
+/* A choice that isn't available (e.g. Today after lifts close) */
+.choices input:disabled + span { opacity: .45; cursor: not-allowed; text-decoration: line-through; }
