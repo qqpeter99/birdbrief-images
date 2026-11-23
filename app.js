@@ -72,7 +72,20 @@
   // Ski and ride plan request.
   const plan = document.getElementById('plan');
   if (plan) {
-    const label = (name, value) => plan.querySelector(`input[name=${name}][value="${value}"]`)?.closest('label')?.querySelector('b, span')?.firstChild?.textContent.trim() || value;
+    // After lifts close (4pm Snowbird time), "Today" no longer makes sense:
+    // switch to Tomorrow and grey Today out.
+    const denverHour = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver', hour: 'numeric', hour12: false }).format(new Date())) % 24;
+    if (denverHour >= 16) {
+      const today = plan.querySelector('input[name=day][value=today]');
+      const tomorrow = plan.querySelector('input[name=day][value=tomorrow]');
+      if (today && tomorrow) {
+        today.disabled = true;
+        tomorrow.checked = true;
+        const span = today.closest('label')?.querySelector('span');
+        if (span) span.textContent = 'Today (lifts closed)';
+      }
+    }
+    const label =(name, value) => plan.querySelector(`input[name=${name}][value="${value}"]`)?.closest('label')?.querySelector('b, span')?.firstChild?.textContent.trim() || value;
     plan.addEventListener('submit', async e => {
       e.preventDefault();
       if (!plan.reportValidity()) return;
