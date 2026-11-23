@@ -250,3 +250,10 @@ nav .nav-btn.ghost:hover { background: rgba(255,255,255,.12); }
 
 /* Unsubscribe page */
 .simple-page { max-width: 640px; padding-top: 64px; padding-bottom: 96px; }
+
+/* Form errors and the Turnstile human check */
+.form-error { flex-basis: 100%; color: #ffb4a8; font-size: 14px; margin: 8px 0 0; }
+.plan-form .form-error { color: var(--skip); }
+.cf-turnstile { flex-basis: 100%; margin-top: 10px; }
+form.signup { flex-wrap: wrap; }
+button:disabled { opacity: .6; cursor: progress; }

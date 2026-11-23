@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
 </head>
 <body class="plan-page">
   <div class="announce mono">Snowbird opens Wed, Nov 25 <b>·</b> Free for the 2026–27 season</div>
@@ -98,6 +98,7 @@
           <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" />
           <button type="submit">Email my plan</button>
         </div>
+        <div data-turnstile="light"></div>
         <p class="fine mono dark">Free · One email with your plan · We don't add you to the daily brief unless you ask</p>
         <label class="optin"><input type="checkbox" name="subscribe" /> Also send me the free daily brief</label>
       </fieldset>
@@ -119,41 +120,7 @@
     </div>
   </footer>
 
-  <script>
-    // Preview only: nothing is sent or stored. In the live version this posts
-    // to a small backend that starts the plan job and emails the result.
-    const form = document.getElementById('plan');
-
-    const label = (name, value) => form.querySelector(`input[name=${name}][value="${value}"]`)?.closest('label')?.querySelector('b, span')?.firstChild?.textContent.trim() || value;
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      if (!form.reportValidity()) return;
-      const f = new FormData(form);
-      const day = f.get('day');
-      const [h, m] = f.get('arrive').split(':').map(Number);
-      const arrive = new Date(2000, 0, 1, h, m).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
-      const terrain = f.getAll('terrain').map(t => label('terrain', t));
-      const items = [
-        ['When', day[0].toUpperCase() + day.slice(1) + `, arriving ${arrive}`],
-        ['Riding', `${label('ride', f.get('ride'))}, ${label('level', f.get('level'))} level`],
-        ['Time on the mountain', label('hours', f.get('hours'))],
-        ['Getting there', label('transport', f.get('transport'))],
-        ['Terrain', terrain.length ? terrain.join(', ') : 'No preference'],
-        ['Send to', f.get('email') + (f.get('subscribe') ? ' (plus the daily brief)' : '')],
-      ];
-      const ul = document.getElementById('summary');
-      ul.replaceChildren(...items.map(([k, v]) => {
-        const li = document.createElement('li');
-        const b = document.createElement('b');
-        b.textContent = k;
-        li.append(b, document.createTextNode(v));
-        return li;
-      }));
-      form.hidden = true;
-      document.getElementById('done').hidden = false;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  <script src="config.js?v=1"></script>
+  <script src="app.js?v=1"></script>
 </body>
 </html>
