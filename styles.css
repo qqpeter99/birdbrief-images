@@ -265,3 +265,16 @@ button:disabled { opacity: .6; cursor: progress; }
   form.signup .cf-turnstile { flex: 0 0 auto; }
   form.signup .form-error { flex: 0 0 auto; }
 }
+
+/* Resort chips: Snowbird is live, more coming */
+.resorts { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 20px; }
+.resort { display: inline-flex; align-items: center; gap: 8px; font: 500 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; padding: 7px 12px; border-radius: 999px; }
+.resort em { font-style: normal; font-size: 10px; opacity: .8; }
+.resort.live { background: #fff; color: var(--ink); box-shadow: 0 0 0 2px var(--accent); }
+.resort.live em { color: var(--go); opacity: 1; font-weight: 500; }
+.resort.soon { background: rgba(255,255,255,.12); color: rgba(255,255,255,.75); border: 1px dashed rgba(255,255,255,.45); }
+.resort .dot { width: 8px; height: 8px; border-radius: 50%; background: #2fbf55; box-shadow: 0 0 0 0 rgba(47,191,85,.6); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(47,191,85,.6); } 70% { box-shadow: 0 0 0 8px rgba(47,191,85,0); } 100% { box-shadow: 0 0 0 0 rgba(47,191,85,0); } }
+.resort-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 0 0 18px; }
+.resort.on-light { box-shadow: 0 0 0 2px var(--accent); }
+.soon-note { color: var(--muted); font-size: 14px; }
