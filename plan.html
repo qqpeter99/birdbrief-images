@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800;900&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body class="plan-page">
   <div class="announce mono">Snowbird opens Wed, Nov 25 <b>·</b> Free for the 2026–27 season</div>
@@ -35,15 +35,14 @@
         <div class="choices">
           <label><input type="radio" name="day" value="today" checked /><span>Today</span></label>
           <label><input type="radio" name="day" value="tomorrow" /><span>Tomorrow</span></label>
-          <label class="with-input"><input type="radio" name="day" value="date" /><span>Pick a date <input type="date" name="date" aria-label="Date" /></span></label>
         </div>
       </fieldset>
 
       <fieldset>
-        <legend><span class="q mono">02</span>Ski or snowboard?</legend>
+        <legend><span class="q mono">02</span>Ski or ride?</legend>
         <div class="choices">
           <label><input type="radio" name="ride" value="ski" checked /><span>Ski</span></label>
-          <label><input type="radio" name="ride" value="snowboard" /><span>Snowboard</span></label>
+          <label><input type="radio" name="ride" value="snowboard" /><span>Ride (snowboard)</span></label>
         </div>
       </fieldset>
 
@@ -52,8 +51,7 @@
         <div class="choices cards">
           <label><input type="radio" name="level" value="learning" /><span><b>Learning</b><small>Greens and easy groomers</small></span></label>
           <label><input type="radio" name="level" value="cruiser" checked /><span><b>Cruiser</b><small>Blue groomers, comfortable anywhere marked</small></span></label>
-          <label><input type="radio" name="level" value="advanced" /><span><b>Advanced</b><small>Blacks, bumps, some off-piste</small></span></label>
-          <label><input type="radio" name="level" value="expert" /><span><b>Expert</b><small>Cirque, chutes, big bowls</small></span></label>
+          <label><input type="radio" name="level" value="advanced" /><span><b>Advanced</b><small>Blacks, moguls, steeps and bowls</small></span></label>
         </div>
       </fieldset>
 
@@ -68,9 +66,8 @@
       <fieldset>
         <legend><span class="q mono">05</span>How long will you ski or ride?</legend>
         <div class="choices">
-          <label><input type="radio" name="hours" value="2" /><span>About 2 hours</span></label>
-          <label><input type="radio" name="hours" value="4" checked /><span>Half day</span></label>
-          <label><input type="radio" name="hours" value="7" /><span>Full day</span></label>
+          <label><input type="radio" name="hours" value="2" checked /><span>About 2 hours</span></label>
+          <label><input type="radio" name="hours" value="more" /><span>More than 2 hours</span></label>
         </div>
       </fieldset>
 
@@ -78,8 +75,7 @@
         <legend><span class="q mono">06</span>How are you getting up the canyon?</legend>
         <div class="choices">
           <label><input type="radio" name="transport" value="drive" checked /><span>Drive</span></label>
-          <label><input type="radio" name="transport" value="carpool" /><span>Carpool</span></label>
-          <label><input type="radio" name="transport" value="bus" /><span>UTA ski bus</span></label>
+          <label><input type="radio" name="transport" value="bus" /><span>UTA ski bus (no parking needed)</span></label>
         </div>
       </fieldset>
 
@@ -87,7 +83,7 @@
         <legend><span class="q mono">07</span>Terrain you love <span class="optional">Optional, pick any</span></legend>
         <div class="choices">
           <label><input type="checkbox" name="terrain" value="groomers" /><span>Groomers</span></label>
-          <label><input type="checkbox" name="terrain" value="bumps" /><span>Bumps</span></label>
+          <label><input type="checkbox" name="terrain" value="moguls" /><span>Moguls</span></label>
           <label><input type="checkbox" name="terrain" value="trees" /><span>Trees</span></label>
           <label><input type="checkbox" name="terrain" value="steeps" /><span>Steeps</span></label>
           <label><input type="checkbox" name="terrain" value="bowls" /><span>Bowls</span></label>
@@ -126,9 +122,6 @@
     // Preview only: nothing is sent or stored. In the live version this posts
     // to a small backend that starts the plan job and emails the result.
     const form = document.getElementById('plan');
-    const dateInput = form.querySelector('input[name=date]');
-    dateInput.min = new Date().toISOString().slice(0, 10);
-    dateInput.addEventListener('focus', () => { form.querySelector('input[name=day][value=date]').checked = true; });
 
     const label = (name, value) => form.querySelector(`input[name=${name}][value="${value}"]`)?.closest('label')?.querySelector('b, span')?.firstChild?.textContent.trim() || value;
 
@@ -136,7 +129,7 @@
       e.preventDefault();
       if (!form.reportValidity()) return;
       const f = new FormData(form);
-      const day = f.get('day') === 'date' ? (f.get('date') || 'a date you pick') : f.get('day');
+      const day = f.get('day');
       const [h, m] = f.get('arrive').split(':').map(Number);
       const arrive = new Date(2000, 0, 1, h, m).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
       const terrain = f.getAll('terrain').map(t => label('terrain', t));
