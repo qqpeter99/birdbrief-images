@@ -257,3 +257,11 @@ nav .nav-btn.ghost:hover { background: rgba(255,255,255,.12); }
 .cf-turnstile { flex-basis: 100%; margin-top: 10px; }
 form.signup { flex-wrap: wrap; }
 button:disabled { opacity: .6; cursor: progress; }
+
+/* Turnstile: full width in row layouts, natural height when the form stacks
+   on phones (flex-basis 100% would otherwise mean 100% height). */
+.cf-turnstile { width: 100%; min-height: 65px; }
+@media (max-width: 560px) {
+  form.signup .cf-turnstile { flex: 0 0 auto; }
+  form.signup .form-error { flex: 0 0 auto; }
+}

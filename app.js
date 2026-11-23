@@ -1,5 +1,5 @@
 // Form handling for the daily brief signup (index.html) and the ski and ride
-// plan request (plan.html). Talks to the BirdBrief backend when config.js sets
+// plan request (plan.html). Talks to the SkiCall backend when config.js sets
 // an API URL; otherwise shows a preview message and sends nothing.
 (function () {
   const cfg = window.BIRDBRIEF || {};
@@ -16,6 +16,7 @@
       el.className = 'cf-turnstile';
       el.setAttribute('data-sitekey', cfg.turnstileSiteKey);
       el.setAttribute('data-theme', el.dataset.turnstile || 'auto');
+      el.setAttribute('data-size', 'flexible');
     });
   }
   const turnstileToken = form => form.querySelector('[name="cf-turnstile-response"]')?.value || '';
@@ -55,7 +56,7 @@
           const out = await post('/api/subscribe', { email: signup.email.value, turnstileToken: turnstileToken(signup) });
           thanks.textContent = out.status === 'already-subscribed'
             ? 'You\'re already subscribed. See you in the morning!'
-            : 'You\'re in! Your first BirdBrief arrives tomorrow morning.';
+            : 'You\'re in! Your first SkiCall arrives tomorrow morning.';
         } catch (err) {
           setBusy(signup, false);
           showError(signup, err.message);
