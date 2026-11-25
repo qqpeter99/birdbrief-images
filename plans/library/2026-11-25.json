@@ -1,0 +1,1686 @@
+{
+  "version": 1,
+  "date": "2026-11-25",
+  "dayKey": "tomorrow",
+  "slot": "evening",
+  "slots": [
+    "evening"
+  ],
+  "generatedAt": "2026-11-25T00:31:09.910Z",
+  "model": "gemini-2.5-flash",
+  "conditions": "Today features firm morning snow transitioning to soft corn midday and slushy conditions late afternoon, all under mostly cloudy skies and light winds. Groomed runs will offer the best skiing given the low base depth on opening day.",
+  "watchOut": "Watch for variable snow conditions throughout the day, especially firm patches early on and heavy slush late.",
+  "sources": {
+    "snowbird": "ok",
+    "snotel": "ok",
+    "nws": "ok",
+    "nwsHourly": "ok",
+    "nwsAlerts": "ok",
+    "outlook": "ok",
+    "avyApi": "ok",
+    "uac": "ok",
+    "road": "ok",
+    "webcams": "ok",
+    "parkingMap": "ok",
+    "trailMap": "ok"
+  },
+  "problems": [],
+  "variants": [
+    {
+      "level": "learning",
+      "window": "morning",
+      "ride": "ski",
+      "why": "Start on gentle, accessible groomers in Gad Valley to warm up on opening day's firmer snow, building confidence gradually.",
+      "laps": [
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards (lower section)",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "learning",
+      "window": "morning",
+      "ride": "snowboard",
+      "why": "Focus on wide, gentle groomers in Gad Valley, avoiding flats for easy progression on opening day's firmer snow.",
+      "laps": [
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards (lower section)",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "learning",
+      "window": "midday",
+      "ride": "ski",
+      "why": "Enjoy the softening corn snow on wide, gentle groomers in Gad Valley as the day progresses, offering comfortable turns.",
+      "laps": [
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards (lower section)",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "learning",
+      "window": "midday",
+      "ride": "snowboard",
+      "why": "Maximize turns on soft, wide groomers in Gad Valley, keeping momentum on gentle slopes for an enjoyable midday ride.",
+      "laps": [
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards (lower section)",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "learning",
+      "window": "afternoon",
+      "ride": "ski",
+      "why": "Stick to easily accessible, slushy lower mountain groomers in Gad Valley as the day winds down, offering forgiving conditions.",
+      "laps": [
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards (lower section)",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "learning",
+      "window": "afternoon",
+      "ride": "snowboard",
+      "why": "Focus on wide, slushy groomers near the base in Gad Valley for easy turns and a smooth finish to the day.",
+      "laps": [
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers under Baby Thunder",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards (lower section)",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "babythunder",
+          "runs": "gentle groomers",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "cruiser",
+      "window": "morning",
+      "ride": "ski",
+      "why": "Explore varied blue groomers in Gad Valley, starting on firmer snow and progressing to longer runs as conditions soften.",
+      "laps": [
+        {
+          "lift": "midgad",
+          "runs": "Big Emma, Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "gadzoom",
+          "runs": "Chip's Bypass",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "cruiser",
+      "window": "morning",
+      "ride": "snowboard",
+      "why": "Enjoy wide, consistent blue groomers in Gad Valley, minimizing flats for a smooth morning ride on firmer snow.",
+      "laps": [
+        {
+          "lift": "midgad",
+          "runs": "Big Emma, Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "gadzoom",
+          "runs": "Chip's Bypass",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "cruiser",
+      "window": "midday",
+      "ride": "ski",
+      "why": "Take advantage of softening corn snow on varied blue terrain in Gad Valley, including some gentle moguls if desired.",
+      "laps": [
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "gadzoom",
+          "runs": "Chip's Bypass",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma (gentle moguls on side)",
+          "terrain": [
+            "moguls"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Wilbere Chute (upper blue section)",
+          "terrain": [
+            "trees"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "cruiser",
+      "window": "midday",
+      "ride": "snowboard",
+      "why": "Ride the softening blue groomers and gentle terrain in Gad Valley, enjoying the best corn snow conditions of the day.",
+      "laps": [
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "gadzoom",
+          "runs": "Chip's Bypass",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma (gentle moguls on side)",
+          "terrain": [
+            "moguls"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Wilbere Chute (upper blue section)",
+          "terrain": [
+            "trees"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "cruiser",
+      "window": "afternoon",
+      "ride": "ski",
+      "why": "Focus on accessible, slushy blue groomers in Gad Valley, ending near the base as the snow gets heavier.",
+      "laps": [
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "gadzoom",
+          "runs": "Chip's Bypass",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "cruiser",
+      "window": "afternoon",
+      "ride": "snowboard",
+      "why": "Enjoy the softer, slushier blue groomers in Gad Valley, maintaining speed and flow for a fun afternoon.",
+      "laps": [
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Big Emma",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "blue groomers under Gadzoom",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "gadzoom",
+          "runs": "Chip's Bypass",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "midgad",
+          "runs": "Bassackwards",
+          "terrain": [
+            "groomers"
+          ]
+        },
+        {
+          "lift": "wilbere",
+          "runs": "Wilbere Ridge",
+          "terrain": [
+            "groomers"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "advanced",
+      "window": "morning",
+      "ride": "ski",
+      "why": "Tackle firm morning steeps and moguls in Gad Valley, then move to higher terrain as it softens, maximizing early conditions.",
+      "laps": [
+        {
+          "lift": "gadzoom",
+          "runs": "Blackjack",
+          "terrain": [
+            "steeps",
+            "groomers"
+          ],
+          "note": "Warm up on firm groomers."
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Primrose Path",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        },
+        {
+          "lift": "gad2",
+          "runs": "Gad Chutes",
+          "terrain": [
+            "steeps",
+            "trees"
+          ]
+        },
+        {
+          "lift": "littlecloud",
+          "runs": "Path to Paradise, Powder Paradise",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ],
+          "note": "Higher terrain as snow softens."
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Blackjack, Wilbere Chute",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        },
+        {
+          "lift": "gad2",
+          "runs": "Gad Chutes",
+          "terrain": [
+            "steeps",
+            "trees"
+          ]
+        },
+        {
+          "lift": "littlecloud",
+          "runs": "Path to Paradise, Powder Paradise",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Primrose Path",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "littlecloud",
+          "runs": "Path to Paradise",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Primrose Path",
+          "terrain": [
+            "moguls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "gad2",
+          "runs": "Gad Chutes",
+          "terrain": [
+            "trees",
+            "steeps"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "advanced",
+      "window": "morning",
+      "ride": "snowboard",
+      "why": "Carve firm morning steeps in Gad Valley, then seek out softening moguls and bowls, maximizing flow and avoiding traverses.",
+      "laps": [
+        {
+          "lift": "gadzoom",
+          "runs": "Blackjack",
+          "terrain": [
+            "steeps",
+            "groomers"
+          ],
+          "note": "Warm up on firm groomers."
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Primrose Path",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        },
+        {
+          "lift": "gad2",
+          "runs": "Gad Chutes",
+          "terrain": [
+            "steeps",
+            "trees"
+          ]
+        },
+        {
+          "lift": "littlecloud",
+          "runs": "Path to Paradise, Powder Paradise",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ],
+          "note": "Higher terrain as snow softens."
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Blackjack, Wilbere Chute",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        },
+        {
+          "lift": "gad2",
+          "runs": "Gad Chutes",
+          "terrain": [
+            "steeps",
+            "trees"
+          ]
+        },
+        {
+          "lift": "littlecloud",
+          "runs": "Path to Paradise, Powder Paradise",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Primrose Path",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "littlecloud",
+          "runs": "Path to Paradise",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "gadzoom",
+          "runs": "Primrose Path",
+          "terrain": [
+            "moguls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "gad2",
+          "runs": "Gad Chutes",
+          "terrain": [
+            "trees",
+            "steeps"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "advanced",
+      "window": "midday",
+      "ride": "ski",
+      "why": "Capitalize on corn snow in Mineral Basin and steep groomers, enjoying varied terrain as it softens and gets sun.",
+      "laps": [
+        {
+          "lift": "peruvian",
+          "runs": "Peruvian Gulch, Chip's Run upper",
+          "terrain": [
+            "groomers",
+            "steeps"
+          ],
+          "note": "Warm up on front-side steeps."
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mark Malu Fork",
+          "terrain": [
+            "groomers",
+            "bowls"
+          ],
+          "note": "Via Peruvian Tunnel to sun-softened basin."
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Face",
+          "terrain": [
+            "groomers",
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin bowls",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Express bowls",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Regulator Johnson",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin groomers",
+          "terrain": [
+            "groomers",
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Express bowls",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin bowls",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Face",
+          "terrain": [
+            "steeps",
+            "bowls"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Silver Fox",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "advanced",
+      "window": "midday",
+      "ride": "snowboard",
+      "why": "Ride the soft corn snow in Mineral Basin and front-side steeps, maximizing flow and avoiding flats for optimal midday conditions.",
+      "laps": [
+        {
+          "lift": "peruvian",
+          "runs": "Peruvian Gulch, Chip's Run upper",
+          "terrain": [
+            "groomers",
+            "steeps"
+          ],
+          "note": "Warm up on front-side steeps."
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mark Malu Fork",
+          "terrain": [
+            "groomers",
+            "bowls"
+          ],
+          "note": "Via Peruvian Tunnel to sun-softened basin."
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Face",
+          "terrain": [
+            "groomers",
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin bowls",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Express bowls",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Silver Fox",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin groomers",
+          "terrain": [
+            "groomers",
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Express bowls",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin bowls",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Face",
+          "terrain": [
+            "steeps",
+            "bowls"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Regulator Johnson",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "advanced",
+      "window": "afternoon",
+      "ride": "ski",
+      "why": "Chase the last of the soft snow in Mineral Basin and on south-facing slopes, finishing with accessible steeps as conditions become slushy.",
+      "laps": [
+        {
+          "lift": "peruvian",
+          "runs": "Peruvian Gulch, Chip's Run upper",
+          "terrain": [
+            "groomers",
+            "steeps"
+          ],
+          "note": "Warm up on front-side steeps."
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mark Malu Fork",
+          "terrain": [
+            "groomers",
+            "bowls"
+          ],
+          "note": "Via Peruvian Tunnel to sun-softened basin."
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Face",
+          "terrain": [
+            "groomers",
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin bowls",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Express bowls",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Mach Schnell",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin groomers",
+          "terrain": [
+            "groomers",
+            "bowls"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Peruvian Gulch",
+          "terrain": [
+            "groomers",
+            "steeps"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin bowls",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Face",
+          "terrain": [
+            "steeps",
+            "bowls"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Regulator Johnson",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        }
+      ],
+      "source": "model"
+    },
+    {
+      "level": "advanced",
+      "window": "afternoon",
+      "ride": "snowboard",
+      "why": "Enjoy the slushy, soft snow in Mineral Basin and front-side steeps, maintaining flow for a strong finish to the day.",
+      "laps": [
+        {
+          "lift": "peruvian",
+          "runs": "Peruvian Gulch, Chip's Run upper",
+          "terrain": [
+            "groomers",
+            "steeps"
+          ],
+          "note": "Warm up on front-side steeps."
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mark Malu Fork",
+          "terrain": [
+            "groomers",
+            "bowls"
+          ],
+          "note": "Via Peruvian Tunnel to sun-softened basin."
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Face",
+          "terrain": [
+            "groomers",
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin bowls",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Express bowls",
+          "terrain": [
+            "bowls",
+            "steeps"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Regulator Johnson",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        },
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin groomers",
+          "terrain": [
+            "groomers",
+            "bowls"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Peruvian Gulch",
+          "terrain": [
+            "groomers",
+            "steeps"
+          ]
+        }
+      ],
+      "alternates": [
+        {
+          "lift": "mineral",
+          "runs": "Mineral Basin bowls",
+          "terrain": [
+            "bowls"
+          ]
+        },
+        {
+          "lift": "baldy",
+          "runs": "Baldy Face",
+          "terrain": [
+            "steeps",
+            "bowls"
+          ]
+        },
+        {
+          "lift": "peruvian",
+          "runs": "Mach Schnell",
+          "terrain": [
+            "steeps",
+            "moguls"
+          ]
+        }
+      ],
+      "source": "model"
+    }
+  ]
+}
