@@ -287,3 +287,20 @@ button:disabled { opacity: .6; cursor: progress; }
 
 /* A choice that isn't available (e.g. Today after lifts close) */
 .choices input:disabled + span { opacity: .45; cursor: not-allowed; text-decoration: line-through; }
+
+/* ---- On-demand section: the lift photo as a full-width background ---- */
+#ondemand { position: relative; background: #1d3550 url("images/lift-inversion.jpg") center 40% / cover no-repeat; color: #fff; padding: 110px 0; }
+#ondemand::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,24,34,.88) 0%, rgba(14,24,34,.72) 55%, rgba(14,24,34,.4) 100%); }
+#ondemand > * { position: relative; }
+#ondemand .ondemand-grid { display: block; }
+#ondemand h2 { color: #fff; }
+#ondemand .eyebrow { color: #7fd6f5; }
+#ondemand .sub { color: rgba(255,255,255,.85); }
+#ondemand .steps-list { grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 8px; }
+#ondemand .steps-list > div { background: rgba(14,24,34,.58); border: 1px solid rgba(255,255,255,.18); border-radius: 4px; padding: 22px; }
+#ondemand .why .n { color: #7fd6f5; }
+#ondemand .why p { color: rgba(255,255,255,.82); }
+@media (max-width: 860px) {
+  #ondemand { padding: 72px 0; }
+  #ondemand .steps-list { grid-template-columns: 1fr; }
+}

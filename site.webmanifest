@@ -1,0 +1,13 @@
+{
+  "name": "SkiCall",
+  "short_name": "SkiCall",
+  "description": "A free AI game plan for Snowbird skiers and snowboarders.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#009bd1",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
