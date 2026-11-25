@@ -29,8 +29,9 @@ a { color: inherit; }
 .hero h1, .hero p.lede { text-shadow: 0 2px 18px rgba(0,0,0,.25); }
 .hero > * { position: relative; }
 header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-.logo { font-weight: 900; font-size: 22px; letter-spacing: -.01em; text-transform: uppercase; text-decoration: none; }
+.logo { display: inline-flex; align-items: center; font-weight: 900; font-size: 22px; letter-spacing: -.01em; text-transform: uppercase; text-decoration: none; }
 .logo span { color: var(--accent); }
+.logo-mark { width: 34px; height: 34px; display: block; flex: none; margin-right: 10px; }
 nav a { margin-left: 22px; text-decoration: none; opacity: .85; }
 nav a:hover { opacity: 1; }
 .hero-body { margin-top: auto; padding-bottom: 64px; width: 100%; }
