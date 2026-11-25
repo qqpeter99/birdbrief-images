@@ -1,7 +1,7 @@
 {
   "name": "SkiCall",
   "short_name": "SkiCall",
-  "description": "A free AI game plan for Snowbird skiers and snowboarders.",
+  "description": "A free AI game plan for skiers and snowboarders.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
